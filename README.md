@@ -1,4 +1,4 @@
-# Lua 简单异或加密
+Lua Encryptor Made By Chikri
 
 ## LICENSE
 
