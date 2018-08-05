@@ -5,7 +5,7 @@ const compareVersion = require('compare-version');
 const luamin = require('luamin');
 
 const templates = {
-    credit: '-- Lua simple XOR encrypt by Ganlv\n',
+    credit: '-- Lua simple XOR encrypt by Chikri',
     main: 'local main = ',
     decoder: '((function (bytes, key_)\n' +
     '    -- http://lua-users.org/wiki/BitUtils\n' +
@@ -79,10 +79,10 @@ function parseOptions(options) {
             options.luaVersion = '5.2';
         }
         if (!options.keyInputCode) {
-            options.keyInputCode = 'key = gg.prompt({"请输入密码："}, {""}, {"text"})[1]\n';
+            options.keyInputCode = 'key = gg.prompt({"Key："}, {""}, {"text"})[1]\n';
         }
         if (!options.keyWrongAlertCode) {
-            options.keyWrongAlertCode = 'gg.alert("密码错误")';
+            options.keyWrongAlertCode = 'gg.alert("Wrong Key!")';
         }
     }
     if (!options.luaVersion) {
@@ -97,7 +97,7 @@ function parseOptions(options) {
         options.loadFunction = 'load';
     }
     if (!options.keyWrongAlertCode) {
-        options.keyWrongAlertCode = 'print("密码错误")';
+        options.keyWrongAlertCode = 'print("Wrong Key!")';
     }
     return options;
 }
